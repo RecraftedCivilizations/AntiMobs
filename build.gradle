@@ -10,11 +10,23 @@ repositories {
     mavenCentral()
 }
 
+repositories {
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+
+        content {
+            includeGroup 'org.bukkit'
+            includeGroup 'org.spigotmc'
+        }
+    }
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 dependencies {
+    implementation 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
     implementation fileTree(include: ['SaberFactions.jar'], dir: 'lib')
 }
 
