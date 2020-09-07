@@ -1,4 +1,10 @@
 package com.github.DarkVanityOfLight.AntiMobs
 
-class Main {
+import org.bukkit.plugin.java.JavaPlugin
+
+class Main : JavaPlugin(){
+
+    override fun onEnable() {
+
+    }
 }
