@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration
 
 
 class ConfigParser(private val main: Main, private val config : FileConfiguration) {
-    val enabledSpawnFactions : Set<Faction> = emptySet<Faction>().toMutableSet()
+    val enabledSpawnFactions : Set<String> = emptySet<String>().toMutableSet()
     init {
         main.saveDefaultConfig()
         main.reloadConfig()
