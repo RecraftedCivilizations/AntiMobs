@@ -16,7 +16,7 @@ import org.bukkit.event.entity.EntitySpawnEvent
 
 class EntitySpawn(val configParser: ConfigParser) : Listener{
 
-    @EventHandler
+    @EventHandler(ignoreCancelled = true)
     fun onEntitySpawn(event: EntitySpawnEvent){
         if (event.entity is Monster || event.entity is Slime){
             val board : Board = Board.getInstance()
