@@ -9,7 +9,7 @@ class Main : JavaPlugin(){
     private val configParser : ConfigParser = ConfigParser(this, this.config)
 
     override fun onEnable() {
-        Bukkit.getPluginManager().registerEvents(EntitySpawn(), this)
+        Bukkit.getPluginManager().registerEvents(EntitySpawn(configParser), this)
         configParser.reload()
     }
 }
