@@ -1,0 +1,9 @@
+# enabledSpawnFactions:
+#   - FactionNameA
+#   - FactionNameB
+# Factions where mobs will be able to spawn
+
+# spawnInWilderness: true/false
+spawnInWilderness: true
+# Allow monsters to spawn in wilderness or not
+
