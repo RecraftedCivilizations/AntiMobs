@@ -1,6 +1,6 @@
 name: AntiMobs
 main: com.github.DarkVanityOfLight.AntiMobs.Main
-version: '1.0'
+version: '1.1'
 author: DarkVanityOfLight
 depend:
   - Factions
