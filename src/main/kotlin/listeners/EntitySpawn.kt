@@ -22,7 +22,7 @@ class EntitySpawn(val configParser: ConfigParser) : Listener{
         if (event.entity is Monster || event.entity is Slime){
             val board : Board = Board.getInstance()
             val faction : Faction = board.getFactionAt(FLocation(event.entity.location))
-            if (faction.tag !in configParser.enabledSpawnFactions || (!configParser.spawnInWilderness && faction.isWilderness)){
+            if (faction.tag !in configParser.enabledSpawnFactions && (!configParser.spawnInWilderness && faction.isWilderness)){
                 event.isCancelled = true
 
                 if (configParser.debug){
