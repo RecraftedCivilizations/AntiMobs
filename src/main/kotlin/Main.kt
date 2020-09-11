@@ -12,4 +12,10 @@ class Main : JavaPlugin(){
         Bukkit.getPluginManager().registerEvents(EntitySpawn(configParser), this)
         configParser.reload()
     }
+
+    companion object{
+        fun debugLog(message : String){
+            Bukkit.getLogger().info("[AntiMobs] [Debug]: $message")
+        }
+    }
 }
