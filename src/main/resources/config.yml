@@ -7,3 +7,6 @@
 spawnInWilderness: true
 # Allow monsters to spawn in wilderness or not
 
+# debug: true/false
+debug: false
+# Send extra debug infos
