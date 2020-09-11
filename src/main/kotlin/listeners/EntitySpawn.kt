@@ -1,5 +1,6 @@
 package com.github.DarkVanityOfLight.AntiMobs.listeners
 
+import com.github.DarkVanityOfLight.AntiMobs.Main
 import com.github.DarkVanityOfLight.AntiMobs.parsers.ConfigParser
 import com.massivecraft.factions.Board
 import com.massivecraft.factions.FLocation
@@ -23,6 +24,10 @@ class EntitySpawn(val configParser: ConfigParser) : Listener{
             val faction : Faction = board.getFactionAt(FLocation(event.entity.location))
             if (faction.tag !in configParser.enabledSpawnFactions || (!configParser.spawnInWilderness && faction.isWilderness)){
                 event.isCancelled = true
+
+                if (configParser.debug){
+                    Main.debugLog("Cancelled mob spawning")
+                }
             }
 
         }
