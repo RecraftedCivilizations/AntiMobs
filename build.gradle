@@ -27,8 +27,8 @@ dependencies {
 }
 
 dependencies {
-    implementation 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
-    implementation fileTree(include: ['SaberFactions.jar'], dir: 'lib')
+    compileOnly 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
+    compileOnly fileTree(include: ['SaberFactions.jar'], dir: 'lib')
 }
 
 compileKotlin {
