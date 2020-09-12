@@ -11,7 +11,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.EntitySpawnEvent
 
-class EntitySpawn(val configParser: ConfigParser) : Listener {
+class EntitySpawn(private val configParser: ConfigParser) : Listener {
 
     @EventHandler(ignoreCancelled = true)
     fun onEntitySpawn(event: EntitySpawnEvent) {
