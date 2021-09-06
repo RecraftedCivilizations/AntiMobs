@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.4.0-rc'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
     id 'com.github.johnrengelman.shadow' version '2.0.4'
 }
 
@@ -20,6 +20,7 @@ repositories {
             includeGroup 'org.spigotmc'
         }
     }
+    maven { url 'https://www.jitpack.io' }
 }
 
 dependencies {
@@ -28,7 +29,7 @@ dependencies {
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
-    compileOnly fileTree(include: ['SaberFactions.jar'], dir: 'lib')
+    compileOnly 'com.github.SaberLLC:Saber-Factions:2.4.0-RC'
 }
 
 compileKotlin {
