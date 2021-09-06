@@ -38,3 +38,27 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+
+publishing {
+    publications {
+        antimobs(MavenPublication) {
+            groupId = 'com.github.recraftedcivilizations'
+            artifactId = "AntiMobs"
+            version = this.version
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = 'RecraftedCivilizations'
+            //credentials(PasswordCredentials)
+            url = 'https://repo.repsy.io/mvn/darkvanityoflight/recraftedcivilizations'
+
+            credentials {
+                username project.RecraftedCivilizationsUsername
+                password project.RecraftedCivilizationsPassword
+            }
+        }
+    }
+}
